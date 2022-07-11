@@ -36,3 +36,11 @@ x: "-..-",
 y: "-.--",
 z: "--.."
  }
+
+ const translateToMorse = (string) => {
+    return string.toLowerCase().split("").map(words => {
+       return morseAlphabet[words] ? morseAlphabet[words] : words;
+    }).join(" / ");
+ };
+ console.log(translateToMorse('SOS'));
+ console.log(translateToMorse('275'));
