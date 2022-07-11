@@ -115,10 +115,4 @@ const alphaNumericAlphabet = {
     const morseInput = document.getElementById("input_morse");
 
 
-
-
-
-    ///////////////////////////
-
-
     
