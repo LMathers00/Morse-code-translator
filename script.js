@@ -101,25 +101,24 @@ const alphaNumericAlphabet = {
 
 
 
-     const translateToEnglish = (string) => {
-        if(string.includes("[$&+,:;=?@#|'<>.-^*()%!]")) {
-            return ("Invalid string entered")
-        } else {
-            return string.toLowerCase().split("").map(words => {
-                return morseAlphabet[words] ? morseAlphabet[words] : words;
-            }).join("")
+     const translateToEnglish = ( morseCode ) => {
+        return morseCode.split("   ").map(word => word
+                      .split(" ") 
+                      .map(character => alphaNumericAlphabet[character])
+                      .join('')
+        )
         }
-    }
     
     const displayTranslation2 = () => {
-        document.getElementById("output_english").innerHTML = translateToEnglish(
-            englishInput.value.toLowerCase()
-        );
-    };
+        document.getElementById("output_english").innerHTML = translateToEnglish};
       
     const morseInput = document.getElementById("input_morse");
 
 
+
+
+
+    ///////////////////////////
 
 
     
