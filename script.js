@@ -34,13 +34,23 @@ v: "...-",
 w: ".--",
 x: "-..-",
 y: "-.--",
-z: "--.."
+z: "--..",
+' ': " / "
  }
 
  const translateToMorse = (string) => {
     return string.toLowerCase().split("").map(words => {
        return morseAlphabet[words] ? morseAlphabet[words] : words;
-    }).join(" / ");
+    }).join("");
  };
- console.log(translateToMorse('SOS'));
- console.log(translateToMorse('275'));
+//  console.log(translateToMorse('SOS'));
+//  console.log(translateToMorse('275'));
+
+displayTranslation = () => {
+    document.getElementById("output_morse").innerHTML = translateToMorse(
+        englishInput.value.toLowerCase()
+    );
+};
+  
+  
+const englishInput = document.getElementById("input_english");
