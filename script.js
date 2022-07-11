@@ -45,7 +45,7 @@ const translateToMorse = (string) => {
     } else {
         return string.toLowerCase().split("").map(words => {
             return morseAlphabet[words] ? morseAlphabet[words] : words;
-        }).join("")
+        }).join(" ")
     }
 }
 
